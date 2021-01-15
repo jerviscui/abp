@@ -7,6 +7,6 @@ namespace Volo.Abp.MultiTenancy
         /// <summary>
         /// Id of the related tenant.
         /// </summary>
-        Guid? TenantId { get; }
+        Guid? TenantId { get; }//todo cuizj: tolong
     }
 }

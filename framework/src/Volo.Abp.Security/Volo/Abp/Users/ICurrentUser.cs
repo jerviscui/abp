@@ -8,6 +8,7 @@ namespace Volo.Abp.Users
     {
         bool IsAuthenticated { get; }
 
+        //todo cuizj: to long
         [CanBeNull]
         Guid? Id { get; }
 
