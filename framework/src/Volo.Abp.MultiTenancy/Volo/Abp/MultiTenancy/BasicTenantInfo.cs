@@ -10,7 +10,7 @@ namespace Volo.Abp.MultiTenancy
         /// Not null value for a tenant.
         /// </summary>
         [CanBeNull]
-        public Guid? TenantId { get; }
+        public Guid? TenantId { get; }//todo cuizj: to long
 
         /// <summary>
         /// Name of the tenant if <see cref="TenantId"/> is not null.

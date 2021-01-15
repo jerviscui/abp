@@ -64,6 +64,7 @@ namespace Volo.Abp.Auditing
                 return false;
             }
 
+            //todo cuizj: use base attribute check
             if (methodInfo.IsDefined(typeof(AuditedAttribute), true))
             {
                 return true;
@@ -99,6 +100,7 @@ namespace Volo.Abp.Auditing
                 return false;
             }
 
+            //todo cuizj: use base attribute check & move property to front?
             if (entityType.IsDefined(typeof(AuditedAttribute), true))
             {
                 return true;
@@ -106,7 +108,7 @@ namespace Volo.Abp.Auditing
 
             foreach (var propertyInfo in entityType.GetProperties(BindingFlags.Instance | BindingFlags.Public))
             {
-                if(propertyInfo.IsDefined(typeof(AuditedAttribute)))
+                if (propertyInfo.IsDefined(typeof(AuditedAttribute)))
                 {
                     return true;
                 }
