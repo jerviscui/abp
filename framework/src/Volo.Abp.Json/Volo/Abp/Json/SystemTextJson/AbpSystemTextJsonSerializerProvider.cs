@@ -41,6 +41,7 @@ namespace Volo.Abp.Json.SystemTextJson
 
         protected virtual JsonSerializerOptions CreateJsonSerializerOptions(bool camelCase = true, bool indented = false)
         {
+            //todo cuizj: compare first and then new
             var settings = new JsonSerializerOptions(Options.JsonSerializerOptions);
 
             if (camelCase)

@@ -9,6 +9,7 @@ using Volo.Abp.DependencyInjection;
 
 namespace Volo.Abp.Json.Newtonsoft
 {
+    //todo cuizj: remove NewtonJson
     public class AbpNewtonsoftJsonSerializerProvider : IJsonSerializerProvider, ITransientDependency
     {
         private static readonly CamelCaseExceptDictionaryKeysResolver SharedCamelCaseExceptDictionaryKeysResolver =
