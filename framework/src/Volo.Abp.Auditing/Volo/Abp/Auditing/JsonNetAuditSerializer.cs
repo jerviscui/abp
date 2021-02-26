@@ -16,6 +16,7 @@ namespace Volo.Abp.Auditing
 
         public string Serialize(object obj)
         {
+            //todo cuizj: use System.Text.Json.JsonSerializer replace
             return JsonConvert.SerializeObject(obj, GetSharedJsonSerializerSettings());
         }
 

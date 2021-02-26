@@ -65,6 +65,7 @@ namespace Volo.Abp.Auditing
             }
 
             //todo cuizj: use base attribute check
+            //todo cuizj: add attribute cache improve performance
             if (methodInfo.IsDefined(typeof(AuditedAttribute), true))
             {
                 return true;
