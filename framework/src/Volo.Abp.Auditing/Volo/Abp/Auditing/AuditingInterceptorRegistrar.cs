@@ -40,6 +40,7 @@ namespace Volo.Abp.Auditing
         {
             //TODO: In an inheritance chain, it would be better to check the attributes on the top class first.
 
+            //todo cuizj: add attribute cache improve performance
             if (type.IsDefined(typeof(AuditedAttribute), true))
             {
                 return true;

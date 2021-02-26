@@ -16,10 +16,12 @@ namespace Volo.Abp.Specifications
         /// <param name="obj">The object to which the specification is applied.</param>
         /// <returns>True if the specification is satisfied, otherwise false.</returns>
         public virtual bool IsSatisfiedBy(T obj)
-        {
+        {            
             //todo cuizj: save delegate?
             return ToExpression().Compile()(obj);
         }
+
+        //todo cuizj: get complied method?
 
         /// <summary>
         /// Gets the LINQ expression which represents the current specification.
@@ -27,6 +29,7 @@ namespace Volo.Abp.Specifications
         /// <returns>The LINQ expression.</returns>
         public abstract Expression<Func<T, bool>> ToExpression();
         //todo cuizj: parameters object[] or use base parameter type
+        //maybe has boxing and unboxing
 
         /// <summary>
         /// Implicitly converts a specification to expression.
