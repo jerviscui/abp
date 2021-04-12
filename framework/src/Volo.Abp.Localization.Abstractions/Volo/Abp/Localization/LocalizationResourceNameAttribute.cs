@@ -14,6 +14,7 @@ namespace Volo.Abp.Localization
 
         public static LocalizationResourceNameAttribute GetOrNull(Type resourceType)
         {
+            //todo cuizj: add cache for all GetCustomAttributes!!!
             return resourceType
                 .GetCustomAttributes(true)
                 .OfType<LocalizationResourceNameAttribute>()
