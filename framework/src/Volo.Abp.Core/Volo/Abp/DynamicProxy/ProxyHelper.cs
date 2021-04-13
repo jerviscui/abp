@@ -4,6 +4,7 @@ using System.Reflection;
 
 namespace Volo.Abp.DynamicProxy
 {
+    //todo cuizj: instead by PostSharp
     public static class ProxyHelper
     {
         private const string ProxyNamespace = "Castle.Proxies";
