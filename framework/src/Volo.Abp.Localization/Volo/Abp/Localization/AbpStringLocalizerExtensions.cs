@@ -41,6 +41,7 @@ namespace Volo.Abp.Localization
             bool includeParentCultures,
             bool includeBaseLocalizers)
         {
+            //todo cuizj: use PostSharp instead of ProxyHelper
             var internalLocalizer = (ProxyHelper.UnProxy(stringLocalizer) as IStringLocalizer).GetInternalLocalizer();
             if (internalLocalizer is IStringLocalizerSupportsInheritance stringLocalizerSupportsInheritance)
             {

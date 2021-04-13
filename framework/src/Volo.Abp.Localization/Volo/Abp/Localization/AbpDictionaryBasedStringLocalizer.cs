@@ -130,6 +130,7 @@ namespace Volo.Abp.Localization
 
             if (includeBaseLocalizers)
             {
+                //todo cuizj: why .Select(l => l)
                 foreach (var baseLocalizer in BaseLocalizers.Select(l => l))
                 {
                     using (CultureHelper.Use(CultureInfo.GetCultureInfo(cultureName)))
