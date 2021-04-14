@@ -145,6 +145,7 @@ namespace Volo.Abp.AspNetCore.ExceptionHandling
 
             if (exception.Data != null && exception.Data.Count > 0)
             {
+                //todo cuizj: use StringBuilder? and "{" + key + "}" must have a cache?
                 foreach (var key in exception.Data.Keys)
                 {
                     localizedValue = localizedValue.Replace("{" + key + "}", exception.Data[key]?.ToString());

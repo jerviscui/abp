@@ -26,6 +26,12 @@ namespace Volo.Abp.DependencyInjection
             return CachedServices.GetOrAdd(serviceType, () => ServiceProvider.GetRequiredService(serviceType));
         }
 
+        //todo cuizj: use As<T>
+        //public virtual T LazyGetService<T>() where T : class
+        //{
+        //    return (T) LazyGetService(typeof(T)).As<T>();
+        //}
+        
         public virtual T LazyGetService<T>()
         {
             return (T) LazyGetService(typeof(T));
