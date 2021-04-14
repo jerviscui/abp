@@ -5,6 +5,7 @@ using System.Diagnostics;
 
 namespace Volo.Abp
 {
+    //todo cuizj: support nullable
     [DebuggerStepThrough]
     public static class Check
     {
@@ -158,6 +159,25 @@ namespace Volo.Abp
             if (value != null && value.Length > maxLength)
             {
                 throw new ArgumentException($"{parameterName} length must be equal to or lower than {maxLength}!", parameterName);
+            }
+
+            return value;
+        }
+
+        public static string Length(
+            string value,
+            [InvokerParameterName]string parameterName, 
+            int maxLength, 
+            uint minLength)
+        {
+            if (value.Length > maxLength)
+            {
+                throw new ArgumentException($"{parameterName} length must be equal to or lower than {maxLength}!", parameterName);
+            }
+
+            if (value.Length < minLength)
+            {
+                throw new ArgumentException($"{parameterName} length must be equal to or bigger than {minLength}!", parameterName);
             }
 
             return value;

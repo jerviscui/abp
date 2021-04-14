@@ -39,6 +39,7 @@ namespace Volo.Abp.Domain.Entities
         IHasExtraProperties,
         IHasConcurrencyStamp
     {
+        //todo cuizj: remove ExtraPropertyDictionary
         public virtual ExtraPropertyDictionary ExtraProperties { get; protected set; }
 
         [DisableAuditing]
