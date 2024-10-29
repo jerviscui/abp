@@ -9,6 +9,7 @@ namespace Volo.Abp.Domain.Entities.Auditing
     [Serializable]
     public abstract class FullAuditedAggregateRoot : AuditedAggregateRoot, IFullAuditedObject
     {
+        //todo cuizj: mabe use protected set; must upgrade to .net core
         /// <inheritdoc />
         public virtual bool IsDeleted { get; set; }
 

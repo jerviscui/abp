@@ -17,6 +17,8 @@ namespace System.Collections.Generic
         /// <returns>True if key does exists in the dictionary</returns>
         internal static bool TryGetValue<T>(this IDictionary<string, object> dictionary, string key, out T value)
         {
+            //todo cuizj: upgrade to .net core, default includes the extensions 
+
             object valueObj;
             if (dictionary.TryGetValue(key, out valueObj) && valueObj is T)
             {

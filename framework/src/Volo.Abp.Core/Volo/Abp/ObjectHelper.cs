@@ -40,6 +40,7 @@ namespace Volo.Abp
 
                 var memberExpression = propertySelector.Body.As<MemberExpression>();
 
+                //todo cuizj: use Delegate instead of propertyInfo
                 var propertyInfo = obj.GetType().GetProperties().FirstOrDefault(x =>
                     x.Name == memberExpression.Member.Name &&
                     x.GetSetMethod(true) != null);
